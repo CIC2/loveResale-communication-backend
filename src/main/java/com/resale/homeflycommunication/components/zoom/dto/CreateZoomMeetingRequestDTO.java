@@ -1,0 +1,13 @@
+package com.resale.homeflycommunication.components.zoom.dto;
+
+
+import lombok.Data;
+@Data
+public class CreateZoomMeetingRequestDTO {
+    private String topic; //sales or customer appointment
+    private String zoomHostId;
+    private String start_time;
+    private int duration;
+}
+
+
