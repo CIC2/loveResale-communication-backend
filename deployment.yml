@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tmg-vso-communication-app
+  name: resale-communication-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tmg-vso-communication-app
+      app: resale-communication-app
   template:
     metadata:
       labels:
-        app: tmg-vso-communication-app
+        app: resale-communication-app
     spec:
       containers:
-        - name: tmg-vso-communication-app
+        - name: resale-communication-app
           image: de.icr.io/cic-tmg-ecommerce/user-managment-backend-dev-app:638-k8-deployment-77980661-20210727153437
           args:
             - --spring.application.json=$(BINDING)
@@ -48,13 +48,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tmg-vso-communication-service-cip
+  name: resale-communication-service-cip
   labels:
-    app: tmg-vso-communication-app
+    app: resale-communication-app
 spec:
   type: ClusterIP
   ports:
     - port: 80
       targetPort: 8025
   selector:
-    app: tmg-vso-communication-app
+    app: resale-communication-app
