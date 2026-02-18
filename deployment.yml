@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: resale-communication-app
-          image: de.icr.io/cic-tmg-ecommerce/user-managment-backend-dev-app:638-k8-deployment-77980661-20210727153437
+          image: de.icr.io/dev-registry/loveresale-communication-backend:latest
           args:
             - --spring.application.json=$(BINDING)
           env:
