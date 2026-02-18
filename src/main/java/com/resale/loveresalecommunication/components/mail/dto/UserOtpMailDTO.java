@@ -1,0 +1,17 @@
+package com.resale.loveresalecommunication.components.mail.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserOtpMailDTO {
+    String email;
+    String otp;
+    String mailSubject;
+    String mailContent;
+}
+
+
