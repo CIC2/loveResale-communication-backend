@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
 @SpringBootApplication
-@EnableFeignClients(basePackages = "com.tmg.tmgvsocommunication.feign")
+@EnableFeignClients(basePackages = "com.resale.loveresalecommunication.feign")
 public class LoveResaleCommunicationApplication {
     public static void main(String[] args) {
         SpringApplication.run(LoveResaleCommunicationApplication.class, args);
